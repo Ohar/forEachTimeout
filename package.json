@@ -4,6 +4,9 @@
   "description": "Run callback on every array element and return array of callback results with promise",
   "main": "foreach-timeout.js",
   "scripts": {
+    "test": "mocha -w"
+  },
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
