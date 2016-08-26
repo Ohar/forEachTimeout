@@ -2,7 +2,7 @@
   "name": "foreach-timeout",
   "version": "1.0.0",
   "description": "Run callback on every array element and return array of callback results with promise",
-  "main": "index.js",
+  "main": "foreach-timeout.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
