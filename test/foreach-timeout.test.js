@@ -22,13 +22,18 @@ describe(
 			it(
 					'Correct result',
 					done => {
-						forEachTimeout([1, 'foo'], e => Promise.resolve(e + ' bar'), 50)
+						forEachTimeout(
+								[1, 'foo'],
+								e => Promise.resolve(e + ' bar'),
+								50
+						)
 								.then(
 										results => {
 											assert.equal(
 													JSON.stringify(results),
 													JSON.stringify(['1 bar', 'foo bar'])
 											);
+											
 											done();
 										}
 								);
