@@ -1,6 +1,6 @@
 {
   "name": "foreach-timeout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run callback on every array element and return array of callback results with promise",
   "main": "foreach-timeout.js",
   "scripts": {
