@@ -40,5 +40,41 @@ describe(
 					}
 			);
 			
+			it(
+					'Correct timeout',
+					done => {
+						const TIMEOUT    = 180,
+						      INPUT_ARR  = [1, 2, 3, 4, 5],
+						      iterations = [],
+						      start      = new Date();
+						
+						forEachTimeout(
+								INPUT_ARR,
+								e => {
+									iterations.push(new Date());
+									return e;
+								},
+								TIMEOUT
+						)
+								.then(
+										() => {
+											iterations.forEach(
+													(time, i, arr) => {
+														let prevTime      = i === 0
+																    ? start
+																    : arr[i - 1],
+														    executionTime = time - prevTime;
+														
+														assert.isAtLeast(executionTime, TIMEOUT);
+														assert.isAtMost(executionTime, TIMEOUT * 2);
+													}
+											);
+											
+											done();
+										}
+								);
+					}
+			);
+			
 		}
 );
