@@ -1,7 +1,7 @@
 'use strict';
 
 function forEachTimeout (arr, callback, TIMEOUT = 1000) {
-  if (arr && arr.length) {
+  if (Array.isArray(arr)) {
     return new Promise(
       resolve => {
         const MAX = arr.length - 1;
