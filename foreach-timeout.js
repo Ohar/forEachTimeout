@@ -12,7 +12,7 @@ function forEachTimeout (arr, callback, TIMEOUT = 1000) {
 
         function tick () {
           if (i <= MAX) {
-            promises.push(callback(arr[i]));
+            promises.push(callback(arr[i], i, arr));
             i++;
             timer = setTimeout(tick, TIMEOUT);
           } else {
