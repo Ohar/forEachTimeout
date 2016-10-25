@@ -13,7 +13,10 @@
   "keywords": [
     "foreach",
     "timeout",
-    "promise"
+    "promise",
+    "async",
+    "loop",
+    "array"
   ],
   "engines": {
     "node": ">=6.0.0"
