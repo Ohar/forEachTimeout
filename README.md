@@ -17,7 +17,7 @@ forEachTimeout(
   e => Promise.resolve(e + ' bar'), // Handler function
   1000 // Timeout in ms between runs
 )
-.then( // After 4 seconds
+.then( // After 4+ seconds
   results => {
     console.info('results', results); // ['1 bar', '2 bar', '5 bar', 'foo bar']
   }
