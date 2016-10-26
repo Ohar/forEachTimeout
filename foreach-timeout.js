@@ -9,12 +9,26 @@ function forEachTimeout (arr, callback, TIMEOUT = 1000) {
         let timer    = setTimeout(tick, TIMEOUT),
             i        = 0,
             promises = [];
-
+  
         function tick () {
           if (i <= MAX) {
-            promises.push(callback(arr[i], i, arr));
-            i++;
-            timer = setTimeout(tick, TIMEOUT);
+            promises.push(
+                Promise.resolve(callback(arr[i], i, arr))
+                .then(
+                    data => {
+                      i++;
+                      timer = setTimeout(tick, TIMEOUT);
+                      return data;
+                    }
+                )
+                .catch(
+                    err => {
+                      i++;
+                      timer = setTimeout(tick, TIMEOUT);
+                      return err;
+                    }
+                )
+            )
           } else {
             clearTimeout(timer);
             resolve(Promise.all(promises));
