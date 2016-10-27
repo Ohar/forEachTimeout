@@ -46,6 +46,8 @@ Function to handle each element. Should return some result of handling.
 
 Type: `Number`
 
+Default: 1000
+
 Time in ms to pause between handle next element.
 
 ### `results`
