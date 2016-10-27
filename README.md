@@ -23,3 +23,33 @@ forEachTimeout(
   }
 );
 ```
+
+## Syntax
+
+```
+forEachTimeout(Array elements, Function handler [, Number timeout]) => Promise.resolve(results)
+```
+
+### `elements`
+
+Type: `Array`
+
+Array with elements to handle
+
+### `handler`
+
+Type: `Function(element, Number index, Array elements)`
+
+Function to handle each element. Should return some result of handling.
+
+### `timeout`
+
+Type: `Number`
+
+Time in ms to pause between handle next element.
+
+### `results`
+
+Type: `Array`
+
+Array with returned results of handling each element. 
