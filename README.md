@@ -1,6 +1,6 @@
 # forEachTimeout
 
-[![NPM](https://nodei.co/npm/foreach-timeout.png)](https://npmjs.org/package/foreach-timeout)
+[![NPM stats](https://nodei.co/npm/foreach-timeout.png?downloadRank=true&downloads=true)](https://npmjs.org/package/foreach-timeout)
 
 Run callback on every array element and return array of callback results with promise
 
