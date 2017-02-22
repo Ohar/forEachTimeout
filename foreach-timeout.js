@@ -4,11 +4,11 @@ function forEachTimeout (arr, callback, TIMEOUT = 1000) {
   if (Array.isArray(arr)) {
     return new Promise(
       resolve => {
-        const MAX = arr.length - 1;
+	      const MAX      = arr.length - 1,
+	            promises = [];
 
         let timer    = setTimeout(tick, TIMEOUT),
-            i        = 0,
-            promises = [];
+            i        = 0;
   
         function tick () {
           if (i <= MAX) {
