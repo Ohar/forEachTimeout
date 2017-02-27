@@ -21,7 +21,7 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "author": "Pavel Lysenko aka Ohar",
+  "author": "Pavel Lysenko aka Ohar <code@ohar.name>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Ohar/forEachTimeout/issues"
