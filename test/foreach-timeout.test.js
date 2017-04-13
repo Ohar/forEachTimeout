@@ -64,7 +64,7 @@ describe(
 									    executionTime = time - prevTime;
 
 									assert.isAtLeast(executionTime, TIMEOUT);
-									assert.isAtMost(executionTime, TIMEOUT * 2);
+									assert.isAtMost(executionTime, TIMEOUT * INPUT_ARR.length);
 								}
 							);
 
