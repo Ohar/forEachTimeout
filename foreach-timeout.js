@@ -3,33 +3,23 @@
 function forEachTimeout (arr, callback, TIMEOUT = 1000) {
 	if (Array.isArray(arr)) {
 		return new Promise(
-			resolve => {
+			async resolve => {
 				const MAX      = arr.length - 1,
 				      promises = [];
 
 				let timer = setTimeout(tick, TIMEOUT),
 				    i     = 0;
 
-				function tick () {
+				async function tick () {
 					if (i <= MAX) {
-						promises.push(
-							Promise
-								.resolve(callback(arr[i], i, arr))
-								.then(
-									data => {
-										i++;
-										timer = setTimeout(tick, TIMEOUT);
-										return data;
-									}
-								)
-								.catch(
-									err => {
-										i++;
-										timer = setTimeout(tick, TIMEOUT);
-										return err;
-									}
-								)
-						)
+						try {
+							promises.push(await callback(arr[i], i, arr));
+						} catch (err) {
+							promises.push(err);
+						}
+
+						i++;
+						timer = setTimeout(tick, TIMEOUT);
 					} else {
 						clearTimeout(timer);
 						resolve(Promise.all(promises));
