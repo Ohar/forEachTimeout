@@ -1,4 +1,4 @@
-# forEachTimeout
+# [forEachTimeout](https://www.npmjs.com/package/foreach-timeout)
 
 Run callback on every array element and return array of callback results with promise
 
@@ -21,6 +21,10 @@ forEachTimeout(
   }
 );
 ```
+
+## How to install
+
+`npm install foreach-timeout`
 
 ## Syntax
 
