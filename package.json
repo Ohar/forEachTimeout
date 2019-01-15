@@ -29,6 +29,6 @@
   "homepage": "https://github.com/Ohar/forEachTimeout#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.1.0"
+    "mocha": "^5.2.0"
   }
 }
