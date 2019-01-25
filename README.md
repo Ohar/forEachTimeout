@@ -1,5 +1,10 @@
 # [forEachTimeout](https://www.npmjs.com/package/foreach-timeout)
 
+[![NPM version](https://img.shields.io/npm/v/foreach-timeout.svg)](https://www.npmjs.com/package/foreach-timeout)
+[![License: MIT](https://img.shields.io/npm/l/foreach-timeout.svg)](https://www.npmjs.com/package/foreach-timeout)
+[![Node version](https://img.shields.io/node/v/foreach-timeout.svg)](https://www.npmjs.com/package/foreach-timeout)
+[![install size](https://packagephobia.now.sh/badge?p=foreach-timeout)](https://packagephobia.now.sh/result?p=foreach-timeout)
+
 Run callback on every array element and return array of callback results with promise
 
 ## Goal
